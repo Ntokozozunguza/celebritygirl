@@ -1,0 +1,12 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ range .Pages }}
+  <div class="blog-card">
+    <a href="{{ .RelPermalink }}">
+      <img src="{{ .Params.image }}" alt="{{ .Title }}">
+      <h4>{{ .Title }}</h4>
+      <p>{{ .Params.description }}</p>
+    </a>
+  </div>
+{{ end }}
+{{ end }}

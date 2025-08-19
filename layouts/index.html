@@ -1,0 +1,109 @@
+{{ define "main" }}
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h2>Welcome to My World</h2>
+    <p>Model. Creator. Inspiration.</p>
+    <a href="#channels" class="btn">Join My Channels</a>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <img src="/images/portrait.jpg" alt="Celebrity">
+  <h3>About Me</h3>
+  <p>I’m a model and content creator passionate about elegance, expression, and empowering others through art and style.</p>
+</section>
+
+<!-- WhatsApp Channels -->
+<section class="channels" id="channels">
+  <h3>My WhatsApp Channels</h3>
+  <div class="channel-grid">
+    <div class="channel-card">
+      <img src="/images/channel1.png" alt="Fashion Diaries">
+      <div class="channel-info">
+        <h4>Fashion Diaries</h4>
+        <p>Daily style tips and inspiration</p>
+        <button>Join</button>
+      </div>
+    </div>
+    <div class="channel-card">
+      <img src="/images/channel2.jpg" alt="Behind the Lens">
+      <div class="channel-info">
+        <h4>Behind the Lens</h4>
+        <p>Backstage content and photoshoots</p>
+        <button>Join</button>
+      </div>
+    </div>
+    <div class="channel-card">
+      <img src="/images/channel3.jpg" alt="Life & Vibes">
+      <div class="channel-info">
+        <h4>Life & Vibes</h4>
+        <p>Personal stories, wellness and travel</p>
+        <button>Join</button>
+      </div>
+    </div>
+    <div class="channel-card">
+      <img src="/images/channel4.jpg" alt="Fans Corner">
+      <div class="channel-info">
+        <h4>Fans Corner</h4>
+        <p>Giveaways, fan art and chats</p>
+        <button>Join</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Blog -->
+<section class="blog" id="blog">
+  <h3>Latest Blogs</h3>
+  <div class="blog-grid">
+    {{ range first 2 (where .Site.RegularPages "Section" "blog") }}
+      <div class="blog-card">
+        <a href="{{ .RelPermalink }}">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}">
+          <h4>{{ .Title }}</h4>
+          <p>{{ .Params.description }}</p>
+		  <p>Total blog posts: {{ len (where .Site.RegularPages "Section" "blog") }}</p>
+
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+
+<!-- Social -->
+<section class="social" id="social">
+  <h3>Follow Me</h3>
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-tiktok"></i></a>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <h3>Contact Me</h3>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter">
+  <h3>Subscribe to My Newsletter</h3>
+  <form>
+    <input type="email" placeholder="Your Email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+{{ end }}

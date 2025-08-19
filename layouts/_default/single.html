@@ -1,0 +1,45 @@
+{{ define "main" }}
+<article class="blog-single">
+  <h1>{{ .Title }}</h1>
+  <p><small>{{ .Date.Format "January 2, 2006" }}</small></p>
+  {{ with .Params.image }}
+    <img src="{{ . }}" alt="{{ $.Title }}" class="featured-image">
+  {{ end }}
+  <div class="content">
+    {{ .Content }}
+  </div>
+
+  <div class="meta">
+    {{ with .Params.tags }}
+      <p><strong>Tags:</strong>
+        {{ range . }}
+          <a href="{{ "tags/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+      </p>
+    {{ end }}
+    {{ with .Params.categories }}
+      <p><strong>Categories:</strong>
+        {{ range . }}
+          <a href="{{ "categories/" | relURL }}{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+      </p>
+    {{ end }}
+  </div>
+
+  <h3>Related Posts</h3>
+  <div class="blog-grid">
+    {{ $current := . }}
+    {{ range first 2 (where .Site.RegularPages "Section" "blog") }}
+      {{ if ne .Permalink $current.Permalink }}
+        <div class="blog-card">
+          <a href="{{ .RelPermalink }}">
+            <img src="{{ .Params.image }}" alt="{{ .Title }}">
+            <h4>{{ .Title }}</h4>
+            <p>{{ .Params.description }}</p>
+          </a>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOPHIA GRACE | EDITORIAL FASHION</title>
+    <style>
+       /* WhatsApp Channels Section - CIRCULAR CARDS */
+.channels-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.channel-card {
+    background: white;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+}
+
+.channel-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: #25D366;
+}
+
+.channel-icon {
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: all 0.3s ease;
+}
+
+.channel-icon::before {
+    content: "📱";
+    font-size: 1.5rem;
+}
+.channel-card:nth-child(1) .channel-icon::before { content: "🎬"; }
+.channel-card:nth-child(2) .channel-icon::before { content: "💫"; }
+.channel-card:nth-child(3) .channel-icon::before { content: "🌿"; }
+.channel-card:nth-child(4) .channel-icon::before { content: "💼"; }
+
+.channel-card h3 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.channel-card p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+.join-btn {
+    background: #25D366;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+.join-btn:hover {
+    background: #1eb855;
+    transform: scale(1.05);
+}
+
+/* Blog Section - 2 CARDS PER ROW, SQUARE */
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+}
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.blog-image {
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.blog-number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+.blog-content {
+    padding: 1.5rem;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog-card h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    color: #000;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    border-bottom: 1px solid #000;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+.read-more:hover {
+    color: #25D366;
+    border-color: #25D366;
+}
+
+/* Responsive Grid (Mobile) */
+@media (max-width: 768px) {
+    .channels-grid {
+        grid-template-columns: 1fr;
+    }
+    .blogs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>SOPHIA GRACE</h1>
+            <div class="hero-subtitle">EDITORIAL FASHION MODEL</div>
+            <p class="hero-description">Redefining elegance through the lens of high fashion, bringing editorial vision to life with every frame.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>ABOUT ME</h2>
+                <p>With over five years in the fashion industry, I've had the privilege of working with renowned photographers and brands across the globe. My journey began in Milan and has taken me from the runways of Paris to the studios of New York.</p>
+                <p>I specialize in editorial fashion, bringing a unique blend of sophistication and contemporary edge to every project. My work has been featured in leading fashion publications and campaigns for luxury brands.</p>
+                <p>Beyond modeling, I'm passionate about mentoring emerging talent and sharing insights about the evolving landscape of fashion and beauty.</p>
+            </div>
+            <div class="about-image">
+                <div class="profile-name">SOPHIA GRACE</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Channels Section -->
+    <section class="channels">
+        <h2 class="section-title fade-in">EXCLUSIVE CHANNELS</h2>
+        <div class="channels-grid">
+            <div class="channel-card fade-in">
+                <div class="channel-icon"></div>
+                <h3>BEHIND THE SCENES</h3>
+                <p>Exclusive glimpses into photo shoots, runway preparations, and the creative process behind editorial campaigns.</p>
+                <button class="join-btn">JOIN CHANNEL</button>
+            </div>
+            <div class="channel-card fade-in">
+                <div class="channel-icon"></div>
+                <h3>FASHION INSIGHTS</h3>
+                <p>Industry trends, styling tips, and insights from the world of high fashion and editorial photography.</p>
+                <button class="join-btn">JOIN CHANNEL</button>
+            </div>
+            <div class="channel-card fade-in">
+                <div class="channel-icon"></div>
+                <h3>WELLNESS & FITNESS</h3>
+                <p>My personal wellness routine, fitness tips, and maintaining balance in the demanding world of fashion.</p>
+                <button class="join-btn">JOIN CHANNEL</button>
+            </div>
+            <div class="channel-card fade-in">
+                <div class="channel-icon"></div>
+                <h3>CAREER GUIDANCE</h3>
+                <p>Mentorship for aspiring models, career advice, and navigating the fashion industry professionally.</p>
+                <button class="join-btn">JOIN CHANNEL</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blogs">
+        <h2 class="section-title fade-in">MY EDITORIALS</h2>
+        <div class="blogs-grid">
+            <article class="blog-card fade-in">
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    <div class="blog-number">01</div>
+                </div>
+                <div class="blog-content">
+                    <h3>THE ART OF EDITORIAL STORYTELLING</h3>
+                    <p>Exploring how fashion photography transcends mere documentation to become a powerful narrative medium that shapes cultural conversations.</p>
+                    <a href="#" class="read-more">READ MORE</a>
+                </div>
+            </article>
+            <article class="blog-card fade-in">
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    <div class="blog-number">02</div>
+                </div>
+                <div class="blog-content">
+                    <h3>SUSTAINABLE FASHION FORWARD</h3>
+                    <p>The evolution of eco-conscious fashion and how the industry is embracing sustainability without compromising on editorial excellence.</p>
+                    <a href="#" class="read-more">READ MORE</a>
+                </div>
+            </article>
+            <article class="blog-card fade-in">
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1496747611176-843222e1e57c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    <div class="blog-number">03</div>
+                </div>
+                <div class="blog-content">
+                    <h3>DIGITAL TRANSFORMATION IN FASHION</h3>
+                    <p>How technology is reshaping the fashion landscape, from virtual fittings to AI-driven design processes and digital-first campaigns.</p>
+                    <a href="#" class="read-more">READ MORE</a>
+                </div>
+            </article>
+            <article class="blog-card fade-in">
+                <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');">
+                    <div class="blog-number">04</div>
+                </div>
+                <div class="blog-content">
+                    <h3>THE PSYCHOLOGY OF FASHION</h3>
+                    <p>Understanding the deeper emotional connections between clothing, identity, and self-expression in contemporary culture.</p>
+                    <a href="#" class="read-more">READ MORE</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2 class="section-title fade-in">GET IN TOUCH</h2>
+        <div class="contact-content">
+            <form class="contact-form fade-in">
+                <div class="form-group">
+                    <label for="name">NAME</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">MESSAGE</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">SEND MESSAGE</button>
+            </form>
+            <div class="social-links fade-in">
+                <a href="#" class="social-link">📷</a>
+                <a href="#" class="social-link">📱</a>
+                <a href="#" class="social-link">💼</a>
+                <a href="#" class="social-link">✉️</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Parallax effect for hero background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const about = document.querySelector('.about');
+            
+            if (hero) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+            
+            if (about) {
+                const rect = about.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    about.style.transform = `translateY(${scrolled * 0.3}px)`;
+                }
+            }
+        });
+
+        // Form submission
+        document.querySelector('.contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! I\'ll get back to you soon.');
+            e.target.reset();
+        });
+
+        // Channel join buttons
+        document.querySelectorAll('.join-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                alert('Opening WhatsApp channel...');
+            });
+        });
+    </script>
+</body>
+</html>

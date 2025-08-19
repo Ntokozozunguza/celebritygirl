@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="blog" id="blog">
+  <h3>Latest Blogs</h3>
+  <div class="blog-grid">
+    {{ range .Pages }}
+      <div class="blog-card">
+        <a href="{{ .RelPermalink }}">
+          <img src="{{ .Params.image }}" alt="{{ .Title }}">
+          <h4>{{ .Title }}</h4>
+          <p>{{ .Params.description }}</p>
+        </a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

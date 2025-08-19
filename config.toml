@@ -1,0 +1,9 @@
+﻿baseURL = "https://example.com/"
+languageCode = "en-us"
+title = "Celebrity Name"
+theme = ""
+paginate = 6
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
